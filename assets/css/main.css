@@ -289,6 +289,38 @@ section {
 	padding: 2rem;
 	background-color: var(--card-background);
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	margin-bottom: 3.5rem;
+}
+
+/* Social Footer */
+.social-footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: var(--nav-background);
+	box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+	padding: 0.5rem 0;
+}
+
+.social-icons {
+	display: flex;
+	justify-content: center;
+	gap: 2.5rem;
+	padding: 0.5rem 0;
+}
+
+.social-icon {
+	color: var(--light-text);
+	font-size: 1.8rem;
+	transition: var(--transition);
+	text-decoration: none;
+}
+
+.social-icon:hover {
+	color: var(--primary-color);
+	transform: translateY(-3px);
 }
 
 /* Responsive Design */
@@ -332,6 +364,14 @@ section {
 		margin: 5px 0;
 		transition: var(--transition);
 	}
+
+	.social-icons {
+		gap: 2rem;
+	}
+	
+	.social-icon {
+		font-size: 1.6rem;
+	}
 }
 
 /* Animations */
@@ -348,4 +388,9 @@ section {
 
 .hero-content, .project-card, .about-content, .contact-content {
 	animation: fadeIn 1s ease-out;
+}
+
+/* Update contact section social links */
+.contact-content .social-links {
+	display: none;
 }
