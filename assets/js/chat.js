@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	// Show typing indicator
 	function showTypingIndicator() {
-		chatStatus.textContent = 'AI Tharun is typing';
+		chatStatus.textContent = 'Typing';
 		chatStatus.classList.add('typing');
 		
 		const typingDiv = document.createElement('div');
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	// Remove typing indicator
 	function removeTypingIndicator() {
-		chatStatus.textContent = 'Ready to chat';
+		chatStatus.textContent = '';
 		chatStatus.classList.remove('typing');
 		
 		const typingIndicator = document.getElementById('typingIndicator');
