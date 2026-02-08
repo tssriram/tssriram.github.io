@@ -115,14 +115,14 @@ p {
 	align-items: center;
 	justify-content: space-between;
 	padding: 8rem 2rem 2rem;
-	max-width: 1500px;
+	max-width: 1200px;
 	margin: 0 auto;
 	background-color: var(--background-color);
 }
 
 .hero-content {
 	flex: 1;
-	padding-right: 2rem;
+	padding-right: 1rem;
 }
 
 .hero-image {
@@ -133,8 +133,8 @@ p {
 }
 
 .hero-image img {
-	width: 80%;
-	max-width: 80%;
+	width: 90%;
+	max-width: 90%;
 	height: auto;
 	display: block;
 	margin-left: auto;
@@ -150,7 +150,7 @@ p {
 	text-decoration: none;
 	font-weight: 500;
 	transition: var(--transition);
-	margin-right: 1rem;
+	margin-right: 2rem;
 }
 
 .btn.primary {
