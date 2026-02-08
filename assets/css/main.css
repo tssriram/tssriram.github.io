@@ -131,7 +131,7 @@ p {
 }
 
 .hero-image img {
-	max-width: 100%;
+	max-width: 80%;
 	height: auto;
 	border-radius: 10px;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -192,8 +192,14 @@ section {
 	margin: 0 auto;
 }
 
+.about-text {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
 .about-bullets {
-	margin: 0 0 2rem 1.5rem;
+	margin: 0 0 0 1.5rem;
 	padding: 0;
 	list-style: disc;
 }
@@ -206,14 +212,6 @@ section {
 
 .about-bullets li:last-child {
 	margin-bottom: 0;
-}
-
-.skills {
-	margin-top: 2rem;
-}
-
-.skills + .skills {
-	margin-top: 2.5rem;
 }
 
 .skills h3 {
