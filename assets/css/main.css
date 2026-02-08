@@ -120,12 +120,12 @@ p {
 }
 
 .hero-content {
-	flex: 1.4;
+	flex: 0.6;
 	padding-right: 1rem;
 }
 
 .hero-image {
-	flex: 1;
+	flex: 0.4;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
