@@ -31,6 +31,33 @@
 	display: flex;
 	align-items: center;
 	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.clear-chat-btn {
+	margin-left: auto;
+	padding: 0.5rem 1rem;
+	background-color: transparent;
+	border: 1px solid rgba(231, 76, 60, 0.6);
+	color: #e74c3c;
+	border-radius: 6px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.85rem;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	transition: var(--transition);
+}
+
+.clear-chat-btn:hover {
+	background-color: rgba(231, 76, 60, 0.15);
+	border-color: #e74c3c;
+}
+
+.clear-chat-btn:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
 }
 
 .chat-avatar {

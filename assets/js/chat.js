@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const chatInput = document.getElementById('chatInput');
 	const sendButton = document.getElementById('sendButton');
 	const chatStatus = document.getElementById('chatStatus');
+	const clearChatButton = document.getElementById('clearChatButton');
 	
 	// TODO: Replace with your Cloudflare tunnel endpoint
 	const API_ENDPOINT = 'YOUR_CLOUDFLARE_TUNNEL_URL_HERE';
@@ -181,6 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		isWaitingForResponse = loading;
 		chatInput.disabled = loading;
 		sendButton.disabled = loading;
+		if (clearChatButton) clearChatButton.disabled = loading;
 		
 		if (loading) {
 			sendButton.style.opacity = '0.5';
@@ -248,10 +250,18 @@ document.addEventListener('DOMContentLoaded', () => {
 	function clearChatHistory() {
 		localStorage.removeItem('chatHistory');
 		chatMessages.innerHTML = '';
-		addMessage('Hi! I\'m AI Tharun. Ask me anything about my work, projects, or experience!', 'bot');
+		addMessage('Hi! I\'m Tharun-bot! Ask me anything about my work, projects, or experience!', 'bot');
 	}
 	
 	// Event listeners
+	if (clearChatButton) {
+		clearChatButton.addEventListener('click', () => {
+			if (!isWaitingForResponse) {
+				clearChatHistory();
+			}
+		});
+	}
+	
 	sendButton.addEventListener('click', sendMessage);
 	
 	chatInput.addEventListener('keypress', (e) => {
