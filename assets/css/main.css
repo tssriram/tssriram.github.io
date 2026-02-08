@@ -67,7 +67,7 @@ p {
 }
 
 .nav-container {
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 0 auto;
 	padding: 1.25rem 2rem;
 	display: flex;
@@ -114,7 +114,7 @@ p {
 	align-items: center;
 	justify-content: space-between;
 	padding: 8rem 2rem 2rem;
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 0 auto;
 	background-color: var(--background-color);
 }
@@ -132,8 +132,8 @@ p {
 }
 
 .hero-image img {
-	width: 75%;
-	max-width: 75%;
+	width: 80%;
+	max-width: 80%;
 	height: auto;
 	display: block;
 	margin-left: auto;
@@ -192,7 +192,7 @@ section {
 
 /* About Section */
 .about-content {
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 0 auto;
 }
 
@@ -242,7 +242,7 @@ section {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 2rem;
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 0 auto;
 }
 
@@ -368,7 +368,7 @@ section {
 	align-items: center;
 	gap: 4rem;
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 0 auto;
 	padding: 0 2rem;
 }
