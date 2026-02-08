@@ -127,12 +127,17 @@ p {
 
 .hero-image {
 	flex: 1;
-	text-align: right;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
 
 .hero-image img {
+	width: 80%;
 	max-width: 80%;
 	height: auto;
+	display: block;
+	margin-left: auto;
 	border-radius: 10px;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
