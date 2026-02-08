@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const chatStatus = document.getElementById('chatStatus');
 	const clearChatButton = document.getElementById('clearChatButton');
 	
-	// TODO: Replace with your Cloudflare tunnel endpoint
-	const API_ENDPOINT = 'YOUR_CLOUDFLARE_TUNNEL_URL_HERE';
+	// Updated API endpoint
+	const API_ENDPOINT = 'https://lingering-hill-2f81.tharunsampathsriram.workers.dev/chat';
 	
 	let isWaitingForResponse = false;
 	
@@ -48,8 +48,12 @@ document.addEventListener('DOMContentLoaded', () => {
 					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({
-					message: message,
-					conversation_history: getConversationHistory()
+					messages: [
+						{
+							role: 'user',
+							content: message
+						}
+					]
 				})
 			});
 			
@@ -63,8 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			removeTypingIndicator();
 			
 			// Add bot response
-			if (data.response || data.message) {
-				addMessage(data.response || data.message, 'bot');
+			if (data.response || data.message || data.content) {
+				addMessage(data.response || data.message || data.content, 'bot');
 			} else {
 				throw new Error('Invalid response format');
 			}
