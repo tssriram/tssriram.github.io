@@ -41,19 +41,17 @@ document.addEventListener('DOMContentLoaded', () => {
 		showTypingIndicator();
 		
 		try {
-			// Send request to your API
+			// Get full conversation history and add current message
+			const conversationHistory = getConversationHistory();
+			
+			// Send request to your API with full conversation history
 			const response = await fetch(API_ENDPOINT, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({
-					messages: [
-						{
-							role: 'user',
-							content: message
-						}
-					]
+					messages: conversationHistory
 				})
 			});
 			
